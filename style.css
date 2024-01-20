@@ -1,17 +1,5 @@
-/* Created by Doll */
-body {
-    margin: 0;
-    padding: 0;
-    /* overflow: hidden; */
-    background-color: black;
-}
-
 section {
-    /* height: 100%; */
-    /* width: 100%; */
-    /* position: absolute; */
     background: radial-gradient(#333, #000);
-    /* position: relative; */
 }
 
 .leaf {
@@ -24,10 +12,11 @@ section {
 
 .leaf img {
     position: absolute;
-    /* width: 100%; */
-    /* height: 172vh; */
     top: 0;
     left: 0;
+    animation: fall 15s linear infinite;
+    animation-delay: -2s;
+    animation-fill-mode: both;
 }
 
 .leaf img:nth-child(1) {
@@ -108,31 +97,32 @@ section {
     0% {
         opacity: 1;
         top: -10%;
-        transform: translateX (20px) rotate(0deg);
+        transform: translateX(20px) rotate(0deg);
     }
 
     20% {
         opacity: 0.8;
-        transform: translateX (20px) rotate(45deg);
+        transform: translateX(20px) rotate(45deg);
     }
 
     40% {
-
-        transform: translateX (-20px) rotate(90deg);
+        transform: translateX(-20px) rotate(90deg);
     }
 
     60% {
+        transform: translateX(-20px) rotate(135deg);
+    }
 
-        transform: translateX (-20px) rotate(135deg);
+    70% {
+        filter: hue-rotate(190deg);
     }
 
     80% {
-
-        transform: translateX (20px) rotate(180deg);
+        transform: translateX(20px) rotate(180deg);
     }
 
     100% {
         top: 110%;
-        transform: translateX (-20px) rotate(225deg);
+        transform: translateX(-20px) rotate(225deg);
     }
 }

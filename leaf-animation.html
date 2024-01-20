@@ -46,24 +46,17 @@
         </div>
     </section>
 
+    <!-- SMOOTH SCROLLING JS CODE HERE -->
     <script>
-        // Get all the anchor links with the class "smooth-scroll"
         const links = document.querySelectorAll('a.smooth-scroll');
-
-        // Add a click event listener to each anchor link
         links.forEach(link => {
             link.addEventListener('click', smoothScroll);
         });
-
-        // Function to handle smooth scrolling
         function smoothScroll(e) {
             e.preventDefault();
-
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
-
             if (targetElement) {
-                // Using the scrollTo method to scroll smoothly to the target
                 window.scrollTo({
                     top: targetElement.offsetTop,
                     behavior: 'smooth'
